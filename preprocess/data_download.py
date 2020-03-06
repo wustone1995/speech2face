@@ -12,7 +12,7 @@ def main():
 
 	videos_path = "speech2face/preprocess/data/videos/"
 	audios_path = "speech2face/preprocess/data/audios/"
-	data = pd.read_csv("avspeech_train.csv", header = None, names = ["id", "start", "end", "x", "y"])
+	data = pd.read_csv("./drive/My Drive/avspeech_train.csv", header = None, names = ["id", "start", "end", "x", "y"])
 
 	parser = argparse.ArgumentParser()
 	parser.add_argument("--from_id", type = int, default = 30000)
