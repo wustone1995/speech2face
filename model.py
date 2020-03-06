@@ -9,7 +9,7 @@ class DataLoading:
 
 	@staticmethod
 	def load_ids(from_id, to_id, split='train'):
-		train_csv = "./avspeech_train.csv"
+		train_csv = "./drive/My Drive/avspeech_train.csv"
 		print("Loading IDs ............")
 		data = pd.read_csv(train_csv, header = None, names = ["id", "start", "end", "x", "y"])
 		ids =[]
