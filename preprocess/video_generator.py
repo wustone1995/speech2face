@@ -77,7 +77,7 @@ class VideoExtract():
                 if(len(face_boxes) > 1):
                     if self.verbose:
                         print("-----2 faces detected in {0} frame {1}-----".format(id, j))
-                        return 1
+                    return 1
 
                 elif len(face_boxes) == 0:
                     if self.verbose:
