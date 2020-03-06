@@ -87,7 +87,7 @@ class VideoExtract():
                 top, right, bottom, left = np.squeeze(face_boxes)
                 frame_cropped = frame.crop(box = (left, top, right, bottom))
 
-                frame_resized = scipy.misc.imresize(np.array(frame_cropped), size = (224,224))
+                frame_resized = np.array(Image.fromarray(np.array(frame_cropped)).resize((224,224)))
                 Image.fromarray(frame_resized).save(self.frame_cropped + id + '.jpg')
                 frame_resized = np.expand_dims(np.array(frame_resized, dtype=np.float64), 0)
                 frame_resized = utils.preprocess_input(frame_resized, version=1)
