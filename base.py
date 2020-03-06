@@ -27,7 +27,7 @@ def main():
 
 	parser.add_argument("--epochs", type = int, default = 100)
 	parser.add_argument("--batchsize", type = int, default = 3)
-	parser.add_argument("--num_gpu", type = int, default = 3)
+	parser.add_argument("--num_gpu", type = int, default = 1)
 	parser.add_argument("--num_samples", type = int, default = 102)
 
 	parser.add_argument("--load_model", type = str, default = "")
