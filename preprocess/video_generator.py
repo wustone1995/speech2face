@@ -21,11 +21,11 @@ class VideoExtract():
 
     def __init__(self, fps, duration, face_extraction_model, verbose):
 
-        self.destination_dir = "data/speaker_video_embeddings/"
-        self.videos = "data/videos/"
-        self.frames_dir = "data/frames/"
-        self.frame_cropped = "data/cropped_frames/"
-        self.model_dir = "data/pretrained_model/"
+        self.destination_dir = "speech2face/preprocess/data/speaker_video_embeddings/"
+        self.videos = "speech2face/preprocess/data/videos/"
+        self.frames_dir = "speech2face/preprocess/data/frames/"
+        self.frame_cropped = "speech2face/preprocess/data/cropped_frames/"
+        self.model_dir = "speech2face/preprocess/data/pretrained_model/"
         self.fps = fps
         self.duration = duration
         self.face_extraction_model = face_extraction_model
