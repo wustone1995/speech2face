@@ -5,11 +5,11 @@ import pickle
 import os
 class DataLoading:
 	def __init__(self):
-		self.train_csv = "preprocess/avspeech_train.csv"
+		self.train_csv = "./avspeech_train.csv"
 
 	@staticmethod
 	def load_ids(from_id, to_id, split='train'):
-		train_csv = "preprocess/avspeech_train.csv"
+		train_csv = "./avspeech_train.csv"
 		print("Loading IDs ............")
 		data = pd.read_csv(train_csv, header = None, names = ["id", "start", "end", "x", "y"])
 		ids =[]
