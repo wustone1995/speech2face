@@ -12,9 +12,9 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '1'
 class Speaker():
 
 	def __init__(self, sample_rate = 16000, duration = 6, mono = True, window = 400, stride = 160, fft_length = 512, amp_norm = 0.3, verbose = False):
-		self.videos_path = "data/videos/"
-		self.audios_path = "data/audios/"
-		self.spect_path  = "data/audio_spectrograms/"
+		self.videos_path = "speech2face/preprocess/data/videos/"
+		self.audios_path = "speech2face/preprocess/data/audios/"
+		self.spect_path  = "speech2face/preprocess/data/audio_spectrograms/"
 		self.sample_rate = sample_rate
 		self.duration = duration
 		self.mono = mono
