@@ -10,8 +10,8 @@ FNULL = open(os.devnull, 'w')
 
 def main():
 
-	videos_path = "data/videos/"
-	audios_path = "data/audios/"
+	videos_path = "speech2face/preprocess/data/videos/"
+	audios_path = "speech2face/preprocess/data/audios/"
 	data = pd.read_csv("avspeech_train.csv", header = None, names = ["id", "start", "end", "x", "y"])
 
 	parser = argparse.ArgumentParser()
