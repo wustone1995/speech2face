@@ -5,7 +5,7 @@ import pickle
 import os
 class DataLoading:
 	def __init__(self):
-		self.train_csv = "./avspeech_train.csv"
+		self.train_csv = "./drive/My Drive/avspeech_train.csv"
 
 	@staticmethod
 	def load_ids(from_id, to_id, split='train'):
