@@ -15,8 +15,8 @@ def main():
 	data = pd.read_csv("./drive/My Drive/avspeech_train.csv", header = None, names = ["id", "start", "end", "x", "y"])
 
 	parser = argparse.ArgumentParser()
-	parser.add_argument("--from_id", type = int, default = 30000)
-	parser.add_argument("--to_id", type = int, default = 80000)
+	parser.add_argument("--from_id", type = int, default = 300)
+	parser.add_argument("--to_id", type = int, default = 800)
 	parser.add_argument("--low_memory", type = str, default = "no")
 	parser.add_argument("--sample_rate", type = int, default = 16000)
 	parser.add_argument("--duration", type = int, default = 6)
@@ -39,7 +39,7 @@ def main():
 		if (not os.path.isfile(videos_path + data.loc[i, "id"] + ".mp4")):
 			if args.verbose:
 				print("downloading", data.loc[i, "id"], data.loc[i, "start"], data.loc[i, "end"])
-			url = "youtube-dl -f best --get-url https://www.youtube.com/watch?v=" + str(data.loc[i, "id"])
+			url = "youtube-dl -f best --limit-rate 8191 --get-url https://www.youtube.com/watch?v=" + str(data.loc[i, "id"])
 			res1 = subprocess.run(url, stdout = subprocess.PIPE, shell=True).stdout.decode("utf-8").rstrip()
 			if(res1 == ""):
 				if args.verbose:
