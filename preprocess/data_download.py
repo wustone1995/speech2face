@@ -51,7 +51,7 @@ def main():
 		else:
 			if args.verbose:
 				print("Skipping ", i)
-
+		print("The current index is  ", i)
 		result = vs.extract_video(data.loc[i, "id"], data.loc[i, "x"], data.loc[i, "y"])
 		if result == 1 :
 			if args.verbose:
