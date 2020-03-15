@@ -15,8 +15,8 @@ def main():
 	data = pd.read_csv("./drive/My Drive/avspeech_train.csv", header = None, names = ["id", "start", "end", "x", "y"])
 
 	parser = argparse.ArgumentParser()
-	parser.add_argument("--from_id", type = int, default = 300)
-	parser.add_argument("--to_id", type = int, default = 800)
+	parser.add_argument("--from_id", type = int, default = 3000)
+	parser.add_argument("--to_id", type = int, default = 8000)
 	parser.add_argument("--low_memory", type = str, default = "no")
 	parser.add_argument("--sample_rate", type = int, default = 16000)
 	parser.add_argument("--duration", type = int, default = 6)
