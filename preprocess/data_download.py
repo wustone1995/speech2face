@@ -16,7 +16,7 @@ def main():
 
 	parser = argparse.ArgumentParser()
 	parser.add_argument("--from_id", type = int, default = 4000)
-	parser.add_argument("--to_id", type = int, default = 4500)
+	parser.add_argument("--to_id", type = int, default = 4300)
 	parser.add_argument("--low_memory", type = str, default = "no")
 	parser.add_argument("--sample_rate", type = int, default = 16000)
 	parser.add_argument("--duration", type = int, default = 6)
